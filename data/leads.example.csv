@@ -1,0 +1,7 @@
+first_name,last_name,company_name,job_title,city,state,email,linkedin_url
+John,Smith,Acme Marketing,Founder,Austin,TX,john@acme.example,https://www.linkedin.com/in/john-smith-example/
+Maria,Garcia,Bright Studio,Owner,Denver,CO,maria@bright.example,https://www.linkedin.com/in/maria-garcia-example/
+Sam,Taylor,Northwind Agency,Managing Director,Chicago,IL,sam@northwind.example,https://www.linkedin.com/in/sam-taylor-example/
+Priya,Patel,Lumen Creative,CEO,Seattle,WA,priya@lumen.example,https://www.linkedin.com/in/priya-patel-example/
+Daniel,Okafor,Vertex Growth,Co-Founder,Miami,FL,daniel@vertex.example,https://www.linkedin.com/in/daniel-okafor-example/
+Chris,Nguyen,Harbor Labs,Head of Growth,Boston,MA,chris@harbor.example,https://www.linkedin.com/in/chris-nguyen-example/

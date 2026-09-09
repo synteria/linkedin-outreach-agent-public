@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Local secrets and generated output
+.env
+.env.*
+!.env.example
+*.log
+
+# Your private config and lead data (PII) - NEVER commit these.
+config.json
+state/*
+data/*.csv
+
+# ...but keep the tracked examples and folder placeholders.
+!data/*.example.csv
+!state/.gitkeep
+!state/daily/
+state/daily/*
+!state/daily/.gitkeep
+!.gitkeep

@@ -1,0 +1,70 @@
+{
+  "_comment": "Copy this file to config.json and edit it. config.json is gitignored so your settings and copy stay private. Connection requests send only when safety.sending_enabled is true. DMs stay blocked while their copy is a placeholder (require_dm_copy_before_send).",
+
+  "account": {
+    "name": "Your Name",
+    "_account_note": "Display name to confirm you are logged in as the right person. The rest is informational only.",
+    "plan_label": "Premium / Free / Sales Navigator",
+    "inmail_credits_observed": 0,
+    "timezone": "UTC",
+    "daily_run_time_local_24h": "13:00"
+  },
+
+  "source_csv": "data/leads.csv",
+  "_source_csv_note": "Path to your leads CSV, relative to the repo root. Put your real list at data/leads.csv (it is gitignored). See data/leads.example.csv for the format.",
+
+  "csv_columns": {
+    "_comment": "Map your CSV's header names to the canonical fields. Only linkedin_url is required; the rest improve personalization. Keys are canonical fields; values are the column names in YOUR csv.",
+    "first_name": "first_name",
+    "last_name": "last_name",
+    "company_name": "company_name",
+    "job_title": "job_title",
+    "city": "city",
+    "state": "state",
+    "email": "email",
+    "linkedin_url": "linkedin_url"
+  },
+
+  "limits": {
+    "connection_requests_per_day": 25,
+    "open_profile_dms_per_day": 19,
+    "post_connect_dms_per_day": 40,
+    "max_profile_visits_per_day": 70,
+    "weekly_connection_cap": 100,
+    "inmail_per_day": 0,
+    "withdraw_invites_per_day": 50
+  },
+
+  "timing": {
+    "post_accept_dm_delay_hours": 24,
+    "withdraw_stale_invites_after_days": 30,
+    "min_seconds_between_actions": 25,
+    "max_seconds_between_actions": 90,
+    "working_hours_local_24h": [8, 18]
+  },
+
+  "routing": {
+    "open_profile": "dm_and_connect",
+    "non_open_profile": "connect_only",
+    "send_post_connect_dm_to_open_profiles_already_dmed": false
+  },
+
+  "safety": {
+    "_comment": "Gate every send. Start with sending_enabled false for a dry run, review the batch, then flip it on for a small supervised test.",
+    "sending_enabled": false,
+    "dry_run": true,
+    "require_dm_copy_before_send": true,
+    "withdraw_invites_enabled": false
+  },
+
+  "copy": {
+    "_comment": "DMs will NOT send while their body still contains [PLACEHOLDER. Replace with your own copy. {first_name} is substituted per lead.",
+    "open_profile_dm": {
+      "subject": "[PLACEHOLDER - your open-profile DM subject]",
+      "body": "[PLACEHOLDER - your open-profile DM body. Do NOT send until replaced and approved.]"
+    },
+    "post_connect_dm": {
+      "body": "[PLACEHOLDER - e.g. Good to connect, {first_name}]"
+    }
+  }
+}
